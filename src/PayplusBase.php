@@ -58,7 +58,7 @@ abstract class PayplusBase {
             'Content-Type:application/json',
             'Authorization: '.json_encode($authorization),
         ]);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'WHMCS-PP-87');
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if ($commandAndMethod->method == 'POST') {
