@@ -2,6 +2,10 @@
     "name": "payplus-gateway/payplus-api",
     "type": "library",
     "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
     "autoload": {
         "psr-4": {
             "PayplusGateway\\PayplusApi\\": "src/"
