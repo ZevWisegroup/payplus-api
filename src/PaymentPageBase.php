@@ -41,7 +41,7 @@ abstract class PaymentPageBase extends PayplusBase {
         ];
     }
     
-    public function SetSecure3d(array $data) :bool {
+    public function SetSecure3d(array $data) {
         if (!isset($data['activate'])) {
             return false;
         }
@@ -57,7 +57,7 @@ abstract class PaymentPageBase extends PayplusBase {
         return true;
     }
 
-    public function SetCustomer(array $data) :bool {
+    public function SetCustomer(array $data) {
         if (!$data['customer_name'] || !isset($data['email'])) {
             return false;
         }
@@ -78,7 +78,7 @@ abstract class PaymentPageBase extends PayplusBase {
         return true;
     }
 
-    public function AddItem(array $data) :bool {
+    public function AddItem(array $data) {
         if (!$data['name'] || !isset($data['quantity']) || !isset($data['price'])) {
             return false;
         }
