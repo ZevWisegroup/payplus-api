@@ -33,7 +33,7 @@ abstract class PaymentPageBase extends PayplusBase {
     public $hide_payments_field;
     public $token;
 
-    protected function GetCommandAndMethod(): object
+    protected function GetCommandAndMethod()
     {
         return (object)[
             'command'=>'PaymentPages/generateLink',

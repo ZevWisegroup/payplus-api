@@ -7,7 +7,7 @@ use PayplusGateway\PayplusApi\PayplusBase;
 class Remove extends PayplusBase{
     public $uid;
     public $success = false;
-    protected function GetCommandAndMethod(): object
+    protected function GetCommandAndMethod()
     {
         return (object)[
             'command'=>'Token/Remove/' . $this->uid,

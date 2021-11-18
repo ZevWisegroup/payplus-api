@@ -19,7 +19,7 @@ class Ipn extends PayplusBase{
         return true;
     }
 
-    protected function GetCommandAndMethod(): object
+    protected function GetCommandAndMethod()
     {
         return (object)[
             'command'=>'PaymentPages/ipn',

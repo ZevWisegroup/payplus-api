@@ -56,7 +56,7 @@ class Update extends PayplusBase {
         return $this->success;
     }
 
-    protected function GetCommandAndMethod(): object {
+    protected function GetCommandAndMethod() {
         $result = new \stdClass;
         $result->method = 'POST';
         $result->command = 'Token/Update/'.$this->uid;

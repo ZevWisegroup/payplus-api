@@ -82,7 +82,7 @@ abstract class PayplusBase {
             return $result;
         }
         $result->success = 0;
-        if ($response->message) {
+        if (isset($response->message) && $response->message) {
             $result->result = $response->message;
             $this->errors[] = $response->message;
             return $result;
@@ -121,5 +121,5 @@ abstract class PayplusBase {
     abstract public function Init(array $initData): bool;
     abstract protected function successfulResponse($data);
     abstract public function IsSuccess(): bool;
-    abstract protected function GetCommandAndMethod():object;
+    abstract protected function GetCommandAndMethod();
 }

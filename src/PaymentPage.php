@@ -3,6 +3,7 @@
 namespace PayplusGateway\PayplusApi;
 
 class PaymentPage extends PaymentPageBase {
+    public $payment_page_link;
     public function Init(array $initData): bool
     {
         foreach([

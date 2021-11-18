@@ -8,7 +8,7 @@ class RefundByTransactionUID extends PayplusBase{
     public $more_info;
     public $cvv;
     public $details;
-    protected function GetCommandAndMethod(): object
+    protected function GetCommandAndMethod()
     {
         return (object)[
             'command'=>'Transactions/RefundByTransactionUID',
