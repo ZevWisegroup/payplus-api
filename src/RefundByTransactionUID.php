@@ -36,7 +36,7 @@ class RefundByTransactionUID extends PayplusBase{
         return $payload;
     }
 
-    public function Init(array $initData): bool {
+    public function Init(array $initData) {
         $this->transaction_uid = $initData['transaction_uid'];
         $this->amount = $initData['amount'];
         if (!$this->transaction_uid || $this->amount === null) {
@@ -49,7 +49,7 @@ class RefundByTransactionUID extends PayplusBase{
         $this->details = $data->result->transaction;
     }
 
-    public function IsSuccess(): bool {
+    public function IsSuccess() {
         if ($this->details->status_code === '000') {
             return true;
         }

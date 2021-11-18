@@ -24,7 +24,7 @@ class Remove extends PayplusBase{
         return null;
     }
 
-    public function Init(array $initData): bool {
+    public function Init(array $initData) {
         if (!$initData['uid']) {
             return false;
         }
@@ -36,7 +36,7 @@ class Remove extends PayplusBase{
         $this->success = true;
     }
 
-    public function IsSuccess(): bool {
+    public function IsSuccess() {
         return $this->success;
     }
 

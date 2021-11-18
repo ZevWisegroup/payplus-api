@@ -6,7 +6,7 @@ class TokenPay extends PaymentPageBase {
     protected static $API_URI = "PaymentPages/generateLink";
     protected static $API_METHOD = 'POST';
 
-    public function Init(array $initData): bool
+    public function Init(array $initData)
     {
         foreach([
             'payment_page_uid',
@@ -34,7 +34,7 @@ class TokenPay extends PaymentPageBase {
         }
     }
 
-    public function IsSuccess(): bool
+    public function IsSuccess()
     {
         if ($this->actionPerformed === true) {
             if (isset($this->Response) && $this->Response->success == 1)

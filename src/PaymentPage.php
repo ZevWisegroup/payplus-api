@@ -4,7 +4,7 @@ namespace PayplusGateway\PayplusApi;
 
 class PaymentPage extends PaymentPageBase {
     public $payment_page_link;
-    public function Init(array $initData): bool
+    public function Init(array $initData)
     {
         foreach([
             'payment_page_uid',
@@ -23,7 +23,7 @@ class PaymentPage extends PaymentPageBase {
         return true;
     }
 
-    public function IsSuccess(): bool
+    public function IsSuccess()
     {
         if ($this->actionPerformed === false || !$this->payment_page_link) {
             return false;

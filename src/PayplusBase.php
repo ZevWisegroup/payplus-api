@@ -118,8 +118,8 @@ abstract class PayplusBase {
 
     abstract protected function validate();
     abstract protected function createPayload();
-    abstract public function Init(array $initData): bool;
+    abstract public function Init(array $initData);
     abstract protected function successfulResponse($data);
-    abstract public function IsSuccess(): bool;
+    abstract public function IsSuccess();
     abstract protected function GetCommandAndMethod();
 }

@@ -36,7 +36,7 @@ class Update extends PayplusBase {
         return $payload;
     }
 
-    public function Init(array $initData): bool {
+    public function Init(array $initData) {
         if (!$initData['uid'] || !$initData['credit_card_number'] || !$initData['card_date_mmyy'] || !$initData['terminal_uid']) {
             return false;
         }
@@ -52,7 +52,7 @@ class Update extends PayplusBase {
         $this->success = true;
     }
 
-    public function IsSuccess(): bool {
+    public function IsSuccess() {
         return $this->success;
     }
 

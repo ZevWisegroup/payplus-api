@@ -7,7 +7,7 @@ class Ipn extends PayplusBase{
     public $transaction_uid;
     public $details;
 
-    public function IsSuccess(): bool
+    public function IsSuccess()
     {
         if ($this->actionPerformed === false
         || !$this->details
@@ -45,7 +45,7 @@ class Ipn extends PayplusBase{
         return $payload;
     }
 
-    public function Init(array $initData): bool {
+    public function Init(array $initData) {
         $hasEither = false;
         if ($initData['payment_request_uid']) {
             $this->payment_request_uid = $initData['payment_request_uid'];
